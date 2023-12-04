@@ -63,8 +63,7 @@ public class AtmMachineGroup5 {
                     break;
                 default:
                     break;
-            }               
-            // uploadgithub pemisahan
+            }
 
     }
 }
