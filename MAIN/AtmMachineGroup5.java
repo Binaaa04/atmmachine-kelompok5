@@ -7,16 +7,16 @@ public class AtmMachineGroup5 {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
-        int DepositAmount ; 
-        int WithdrawalAmount; 
-        int TotalWithdraw ; 
-        int TotalDeposit ;
+        int DepositAmount    ; 
+        int WithdrawalAmount ; 
+        int TotalWithdraw    ; 
+        int TotalDeposit     ;
         int Balance = 1000000;
-        int TransferAmount;
-        int TotalTransfer; 
-        int InfoBalance; 
-        int choose  ;
-        int Pin ;
+        int TransferAmount   ;
+        int TotalTransfer    ; 
+        int InfoBalance      ; 
+        int choose           ;
+        int Pin             ;
 
         System.out.println("Masukan PIN : ");
         Pin = sc.nextInt();
