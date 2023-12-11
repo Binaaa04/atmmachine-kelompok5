@@ -62,35 +62,81 @@ public class ATMGroup5 {
 
             switch (choice) {
             case 1:
-                System.out.print("\nInput Deposit: ");
+            do {
+                System.out.println("=================================================");
+                System.out.println("                 Input Deposit:                   ");
+                System.out.print("                   Rp.");
                 DepositAmount = GroupFifth.nextInt();
                 TotalDeposit = DepositAmount + Balance;
-                System.out.print("Total Deposit: " +TotalDeposit);
-                break;
+                System.out.println("    Your current balance is Rp  " +TotalDeposit       );
+                System.out.println("=================================================");
+
+                System.out.println("\n1.keluar");
+                System.out.println("2.Kembali");
+                System.out.print("\nPilih Menu : ");
+                choice2 = GroupFifth.nextInt();
+
+               switch (choice2) {
+                   case 1:
+                       System.out.println("Thank you. Goodbye!");
+                       return;
+               }
+           } while (choice2 != 2);
+             break;
 
             case 2: 
-                System.out.print("\nWithdraw: ");
+                do {
+                System.out.println("=================================================");
+                 System.out.println("                  Withdraw:                     ");
+                 System.out.print("                    Rp.");
                 WithdrawalAmount = GroupFifth.nextInt(); 
                 if (WithdrawalAmount < Balance) {
                     TotalWithdraw = Balance - WithdrawalAmount;
-                    System.out.println("Total Withdraw : " + WithdrawalAmount);                    
-                    System.out.println("your current balance : "+ TotalWithdraw);                        
+                    System.out.println("\nTotal Withdraw : " + WithdrawalAmount);                    
+                    System.out.println("your current balance : "+ TotalWithdraw);      
+                    System.out.println("=================================================");                  
                 } else {                    
                     System.out.println(" You don't have enough balance ");                        
                 }                                   
-                break; 
+                  System.out.println("\n1.keluar");
+                 System.out.println("2.Kembali");
+                 System.out.print("\nPilih Menu : ");
+                 choice2 = GroupFifth.nextInt();
+
+                 switch (choice2) {
+                    case 1:
+                    System.out.println("Thank you. Goodbye!");
+                    return;
+                 }
+            } while (choice2 != 2);
+                break;
 
             case 3: 
-                System.out.println("\nTransfer: " );
+                do {
+                System.out.println("=================================================");
+                System.out.println("                    Transfer:                       " );
+                System.out.print("                      Rp.");
                 TransferAmount = GroupFifth.nextInt(); 
                 if (TransferAmount < Balance) {
                     TotalTransfer = Balance - TransferAmount; 
-                    System.out.println("Total Transfer: " + TransferAmount );
+                    System.out.println("\nTotal Transfer       : " + TransferAmount );
                     System.out.println("your current balance : " + TotalTransfer );
                 } else {
-                    System.out.println(" You don't have enough balance "); 
-                }                                    
-                break;
+                 System.out.println(" You don't have enough balance "); 
+                }              
+                System.out.println("=================================================");
+                System.out.println("\n1.keluar");
+                System.out.println("2.Kembali");
+                System.out.print("\nPilih Menu : ");
+                choice2 = GroupFifth.nextInt();
+
+                switch (choice2) {
+                    case 1:
+                        System.out.println("Thank you. Goodbye!");
+                        return;
+                }
+            } while (choice2 != 2);
+            break;
 
             case 4:
             do {
@@ -111,6 +157,7 @@ public class ATMGroup5 {
 
             } while (choice2 != 2);
             break;
+            
             case 5:
                     System.out.println("\nChange PIN: ");
                     System.out.print("Enter old PIN: ");
